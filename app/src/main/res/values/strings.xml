@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MangoGram</string>
+    <string name="title_chats">Chats</string>
+    <string name="title_profile">Profile</string>
+</resources>
