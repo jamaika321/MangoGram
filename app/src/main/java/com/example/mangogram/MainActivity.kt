@@ -8,6 +8,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.mangogram.databinding.ActivityMainBinding
+import com.example.mangogram.ui.login.LoginFragment
+import com.example.mangogram.utils.APP_ACTIVITY
+import com.example.mangogram.utils.replaceFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,17 +22,17 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView: BottomNavigationView = binding.navView
+        APP_ACTIVITY = this
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_chats, R.id.navigation_profile
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+        if (true){
+            loginScreen()
+        }
+
+    }
+
+
+
+    private fun loginScreen(){
+        replaceFragment(LoginFragment(), false)
     }
 }

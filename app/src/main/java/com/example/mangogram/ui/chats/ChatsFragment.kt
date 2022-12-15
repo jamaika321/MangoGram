@@ -7,7 +7,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.example.mangogram.R
 import com.example.mangogram.databinding.FragmentChatsBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ChatsFragment : Fragment() {
 
@@ -28,12 +36,9 @@ class ChatsFragment : Fragment() {
         _binding = FragmentChatsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
-        dashboardViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
         return root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
