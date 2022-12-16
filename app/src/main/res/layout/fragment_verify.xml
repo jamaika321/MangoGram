@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9FAFF"
-    tools:context=".ui.verify.VerifyFragment"
+    tools:context=".ui.fragments.verify.VerifyFragment"
     android:orientation="vertical"
     android:weightSum="2">
     <LinearLayout

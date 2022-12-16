@@ -1,0 +1,50 @@
+ext {
+    kotlinCoroutinesVersion = '1.6.1'
+    roomVersion = '2.2.5'
+    retrofitVersion = '2.9.0'
+    retrofitGsonConverterVersion = '2.6.0'
+    retrofitCoroutinesAdapterVersion = '0.9.2'
+    okHttpVersion = '3.12.8'
+    okHttpLoggingInterceptorVersion = '3.12.8'
+    daggerVersion = '2.43.2'
+    recyclerViewVersion = '1.1.0'
+    viewPagerVersion = '1.0.0'
+    picassoVersion = '2.8'
+    lifecycleVersion = '2.3.1'
+
+    //LifeCycle
+    lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
+    lifecycleViewModelRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion"
+
+    //Dagger
+    dagger = "com.google.dagger:dagger:$daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    //Coroutines
+    kotlinCoroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
+    kotlinCoroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+
+    //Room
+    roomRuntime = "androidx.room:room-runtime:$roomVersion"
+    roomCompiler =  "androidx.room:room-compiler:$roomVersion"
+    roomKtx = "androidx.room:room-ktx:$roomVersion"
+
+    //Retrofit
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:$retrofitGsonConverterVersion"
+    retrofitCoroutinesAdapter = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$retrofitCoroutinesAdapterVersion"
+
+    //okHttp
+    okHttp = "com.squareup.okhttp3:okhttp:$okHttpVersion"
+    okHttpLoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$okHttpLoggingInterceptorVersion"
+
+    //RecyclerView
+    recyclerView = "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    //ViewPager2
+    viewPager = "androidx.viewpager2:viewpager2:$viewPagerVersion"
+
+    //Picasso
+    picasso = "com.squareup.picasso:picasso:$picassoVersion"
+
+}

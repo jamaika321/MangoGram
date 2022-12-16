@@ -1,0 +1,3 @@
+package com.example.entities.presentation
+
+interface BaseDaggerComponent

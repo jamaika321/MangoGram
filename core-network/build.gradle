@@ -1,25 +1,19 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
 }
 
 android {
-    namespace 'com.example.mangogram'
+    namespace 'com.example.core_network'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.mangogram"
         minSdk 21
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    viewBinding {
-        enabled = true
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -35,9 +29,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 apply from: "$rootDir/deps/deps_versions.gradle"
@@ -45,35 +36,27 @@ apply from: "$rootDir/deps/deps_versions.gradle"
 dependencies {
 
     api project(path: ':api')
-    api project(path: ':core-network')
-    api project(path: ':entities')
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
-    implementation lifecycleViewModel
-    implementation lifecycleViewModelRuntime
+    //Retrofit
+    implementation retrofit
+    implementation retrofitGsonConverter
+    implementation okHttpLoggingInterceptor
+
+    //RV
+    implementation recyclerView
+
+    //Coroutines
+    implementation kotlinCoroutines
+    implementation kotlinCoroutinesCore
 
     //Dagger
     implementation dagger
     kapt daggerCompiler
-
-    //ViewPager
-    implementation viewPager
-
-    //Picasso
-    implementation picasso
-
-    //Retrofit
-    implementation retrofit
 }

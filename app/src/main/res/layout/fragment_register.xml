@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center|top"
-    tools:context=".ui.register.RegisterFragment">
+    tools:context=".ui.fragments.register.RegisterFragment">
 
     <TextView
         android:layout_width="wrap_content"

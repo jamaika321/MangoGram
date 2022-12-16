@@ -8,7 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.mangogram.databinding.ActivityMainBinding
-import com.example.mangogram.ui.login.LoginFragment
+import com.example.mangogram.ui.fragments.login.LoginFragment
 import com.example.mangogram.utils.APP_ACTIVITY
 import com.example.mangogram.utils.replaceFragment
 
@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        (application as App).appComponent.inject(this)
 
         APP_ACTIVITY = this
 

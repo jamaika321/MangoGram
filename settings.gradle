@@ -15,3 +15,5 @@ dependencyResolutionManagement {
 rootProject.name = "MangoGram"
 include ':app'
 include ':api'
+include ':core-network'
+include ':entities'
